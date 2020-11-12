@@ -25,9 +25,14 @@ BEFORE YOU SUBMIT A PULL REQUEST:
 
 #### What change does this introduce?
 
-<!-- Example:
+<!--
 
-This PR adds support for "projection compaction", which is an operation on
+Briefly describe the change you've made in terms of the features or behavior it
+introduces or modifies.
+
+-- EXAMPLE:
+
+This PR adds support for "projection compaction" which is an operation on
 projections that can be invoked by the engine to clean up any "unused" or
 "oversized" projection data.
 
@@ -35,7 +40,12 @@ projections that can be invoked by the engine to clean up any "unused" or
 
 #### What issues does this relate to?
 
-<!-- Example:
+<!--
+
+Link to any GitHub issues that are relevant to these changes. Use the "fixes"
+keyword if you believe an issue to be completely address by this PR.
+
+-- EXAMPLE:
 
 Fixes #123
 Partially addresses #456
@@ -44,7 +54,11 @@ Partially addresses #456
 
 #### Why make this change?
 
-<!-- Example:
+<!--
+
+Briefly describe the rationale behind making this change.
+
+-- EXAMPLE
 
 By making this a first-class feature we encourage the developer to think about
 the lifetime of their projection data, which might otherwise go unaddressed.
@@ -53,8 +67,16 @@ the lifetime of their projection data, which might otherwise go unaddressed.
 
 #### Is there anything you are unsure about?
 
-<!-- Example:
+<!--
 
-Should `Compact()` impose its own timeout?
+This is a place to ask any specific questions about the changes you've made that
+you'd like to see addressed by the project's maintainers before they begin
+reviewing.
+
+Consider submitting a draft PR if you require feedback about incomplete changes.
+
+-- EXAMPLE
+
+Should `Compact()` implementations be required to impose their own timeout?
 
 -->
