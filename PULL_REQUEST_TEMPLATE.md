@@ -51,14 +51,6 @@ the lifetime of their projection data, which might otherwise go unaddressed.
 
 -->
 
-#### What approach has been taken?
-
-<!-- Example:
-
-A `Compact()` method has been added to the `ProjectionMessageHandler` interface.
-
--->
-
 #### Is there anything you are unsure about?
 
 <!-- Example:
