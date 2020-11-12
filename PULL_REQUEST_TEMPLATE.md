@@ -20,6 +20,8 @@ BEFORE YOU SUBMIT A PULL REQUEST:
 - Read the contribution guidelines.
 - Know what you are submitting.
 - Review the entire diff line-by-line. If this is too hard, your PR is too big.
+- Add your changes to the CHANGELOG.md file. Add an [Unreleased] section at the
+  top of the file if there isn't one already.
 
 ------------------------------------------------------------------------------->
 
