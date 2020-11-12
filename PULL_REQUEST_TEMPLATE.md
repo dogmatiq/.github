@@ -43,7 +43,7 @@ projections that can be invoked by the engine to clean up any "unused" or
 <!--
 
 Link to any GitHub issues that are relevant to these changes. Use the "fixes"
-keyword if you believe an issue to be completely address by this PR.
+keyword if you believe an issue to be completely addressed by this PR.
 
 -- EXAMPLE:
 
