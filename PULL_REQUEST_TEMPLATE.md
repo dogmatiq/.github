@@ -17,11 +17,9 @@ Example: Allow for compaction of projections.
 
 BEFORE YOU SUBMIT A PULL REQUEST:
 
-- Read the contribution guidelines.
+- Read the contribution guidelines at https://github.com/dogmatiq/.github/CONTRIBUTING.md.
 - Know what you are submitting.
 - Review the entire diff line-by-line. If this is too hard, your PR is too big.
-- Add your changes to the CHANGELOG.md file. Add an [Unreleased] section at the
-  top of the file if there isn't one already.
 
 ------------------------------------------------------------------------------->
 
