@@ -27,6 +27,8 @@ request being accepted include:
   submit them as separate PRs. Avoid correcting unrelated typos and code style
   violations within more substantial PRs.
 - Write [good commit messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+- Adding any substantial API or behavioral changes to CHANGELOG.md under an
+  `[Unreleased]` heading at the top of the file.
 
 ## Resources
 
