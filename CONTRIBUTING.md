@@ -23,12 +23,58 @@ request being accepted include:
 
 - Mimicking the code style and quality of the project.
 - Including unit tests. Use the existing tools used throughout the project.
-- Submit small, focussed PRs. If you have multiple unrelated changes please
+- Submitting small, focussed PRs. If you have multiple unrelated changes please
   submit them as separate PRs. Avoid correcting unrelated typos and code style
-  violations within more substantial PRs.
-- Write [good commit messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
-- Adding any substantial API or behavioral changes to CHANGELOG.md under an
+  violations within more substantial PRs. Review the diff line-by-line. If this
+  is too hard, your PR is too big.
+- Writing [good commit messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+- Adding any user-facing API or behavioral changes to CHANGELOG.md under an
   `[Unreleased]` heading at the top of the file.
+- Using a PR title that completes the sentence "If applied, this PR will ...".
+- Completing each section of the pull-request template.
+
+### Pull request template
+
+This pull request template contains several prompts for information. Each prompt
+is described below along with an example answer.
+
+**Prompt:** *What change does this introduce?*
+
+Briefly describe the change you've made in terms of the features or behavior it
+introduces or modifies.
+
+Example:
+> This PR adds support for "projection compaction" which is an operation on
+> projections that can be invoked by the engine to clean up any "unused" or
+> "oversized" projection data.
+
+**Prompt:** *Why make this change?*
+
+Briefly describe the rationale behind making this change.
+
+Example:
+> By making this a first-class feature we encourage the developer to think about
+> the lifetime of their projection data, which might otherwise go unaddressed.
+
+**Prompt:** *Is there anything you are unsure about?*
+
+This is a place to ask any specific questions about the changes you've made that
+you'd like to see addressed by the project's maintainers before they begin
+reviewing.
+
+Consider submitting a draft PR if you require feedback about incomplete changes.
+
+Example:
+> Should `Compact()` implementations be required to impose their own timeout?
+
+**Prompt:** *What issues does this relate to?*
+
+Link to any GitHub issues that are relevant to these changes. Use the "fixes"
+keyword if you believe an issue to be completely addressed by this PR.
+
+Example:
+> - Fixes #123
+> - Partially addresses #456
 
 ## Resources
 
