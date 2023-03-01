@@ -1,4 +1,7 @@
-# Dogmatiq Community Health Files
+<div align="center">
 
-This repository contains the GitHub "community health" files for the Dogmatiq
-organisation.
+# Community Health Files
+
+GitHub "community health" files for the Dogmatiq organisation.
+
+</div>
