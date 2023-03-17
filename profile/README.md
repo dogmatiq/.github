@@ -2,17 +2,18 @@
 
 # Dogmatiq
 
-[![Versioning Guide](https://img.shields.io/badge/versioning_guide-007d9c?&style=for-the-badge)][versioning guide]
-[![Contributing Guide](https://img.shields.io/badge/contributing_guide-007d9c?&style=for-the-badge)][contributing guide]
+[![Versioning Guide](https://img.shields.io/badge/guide-versioning-007d9c?&style=for-the-badge)][versioning guide]
+[![Contributing Guide](https://img.shields.io/badge/guide-contributing-007d9c?&style=for-the-badge)][contributing guide]
 
 </center>
 
 We build [Dogma], an open-source toolkit for developing message-based and
-distributed applications in [Go] with a focus on the tenets of [Domain Driven
+distributed applications in [Go], with a focus on the tenets of [Domain Driven
 Design].
 
-We've also open-sourced a number of libraries and tools that we developed for
-use in our own projects; hopefully they'll be useful to you too.
+Along the way we've built a number of libraries and tools for use in our own
+projects. We have published them here in the hope that they will be useful to
+the community at large.
 
 <!-- references -->
 
