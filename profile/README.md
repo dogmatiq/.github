@@ -2,8 +2,8 @@
 
 # Dogmatiq
 
-[![Versioning Guide](https://img.shields.io/badge/guide-versioning-007d9c?&style=for-the-badge)][versioning guide]
 [![Contributing Guide](https://img.shields.io/badge/guide-contributing-007d9c?&style=for-the-badge)][contributing guide]
+[![Versioning Policy](https://img.shields.io/badge/policy-versioning-007d9c?&style=for-the-badge)][versioning policy]
 
 </center>
 
@@ -21,4 +21,4 @@ the community at large.
 [dogma]: https://github.com/dogmatiq/dogma
 [domain driven design]: https://en.wikipedia.org/wiki/Domain-driven_design
 [go]: https://golang.org/
-[versioning guide]: https://github.com/dogmatiq/.github/VERSIONING.md
+[versioning policy]: https://github.com/dogmatiq/.github/VERSIONING.md

@@ -1,17 +1,18 @@
 # Versioning Policy
 
-All Go projects in the `dogmatiq` organisation are Go **modules** and [Semantic
-Versioning].
+All Go projects in the `dogmatiq` organisation are Go **modules** and use
+[Semantic Versioning].
 
-Some of those modules are **libraries** intended to be used as dependencies by
-other projects.
+Some of the modules are **libraries** intended to be imported into other
+projects. Any library release that is **stable** as per [Semantic Versioning] is
+intended to build under the officially supported [Go versions] at that time.
+That is, latest version and the one prior.
 
-At any given time, any **stable version** (as per the definition in [Semantic
-Versioning]) should build under the officially supported [Go versions] at that
-time. This means the latest version and the one prior.
+Dopping support for an unsupported Go version is not considered a breaking
+change, and will not result in a new major version of Dogmatiq libraries.
 
-This guarantee does not apply to Go modules that are not libraries, nor those
-that are not yet considered stable.
+This policy does not apply to Go modules that are not libraries, nor those that
+are not yet considered stable. Such modules are free to target any Go version.
 
 <!-- references -->
 
