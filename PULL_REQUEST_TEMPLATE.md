@@ -1,6 +1,6 @@
 <!--
 A complete guide to completing the pull request template is available at
-https://github.com/dogmatiq/.github/CONTRIBUTING.md.
+https://github.com/dogmatiq/.github/blob/main/CONTRIBUTING.md.
 
 Don't forget to update the CHANGELOG.md file! :)
 -->
