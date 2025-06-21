@@ -40,7 +40,25 @@ Experimental features are identified by the following conventions:
   > Warning: This is an experimental feature. It is not yet considered stable
   > and may be removed or changed at any time.
 
+### Changelogs
+
+All projects shall include a `CHANGELOG.md` file in the root of the module that
+documents the changes made in each release. The changelog is a a human-readable
+summary of the changes that uses the [keep a changelog] format, and is not
+neccessarily exhaustive.
+
+Changelog entries should be written in the past tense. They may contain "tags"
+of the form `**[XXX]**`, for example, that link to this section of the
+documentation.
+
+Recognized tags are:
+
+- **[BC]**: Indicates that the change is a breaking change, and may require
+  changes to code that uses the library.
+
 <!-- references -->
 
+[bc]: #changelogs
+[keep a changelog]: https://keepachangelog.com/en/1.0.0/
 [semantic versioning]: https://semver.org/
 [go versions]: https://endoflife.date/go
