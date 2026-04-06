@@ -86,11 +86,18 @@ otherwise:
 Always written as bullets. Always add the counterpart annotation to each linked
 ADR. Multiple annotations of the same kind are allowed.
 
-| This ADR                         | Linked ADR                          | Meaning                                                                        |
-| -------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------ |
-| `- Supersedes [N. Title][ADR-N]` | `- Superseded by [N. Title][ADR-N]` | This ADR replaces the linked one; the linked ADR's status becomes `Superseded` |
-| `- Amends [N. Title][ADR-N]`     | `- Amended by [N. Title][ADR-N]`    | This ADR modifies the linked one without replacing it; both remain `Accepted`  |
-| `- References [N. Title][ADR-N]` | `- Referenced by [N. Title][ADR-N]` | This ADR cites the linked one for context only; no status change               |
+| This ADR                         | Linked ADR                          | Meaning                                                                                              |
+| -------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `- Supersedes [N. Title][ADR-N]` | `- Superseded by [N. Title][ADR-N]` | This ADR replaces the linked one; the linked ADR's status becomes `Superseded`                       |
+| `- Amends [N. Title][ADR-N]`     | `- Amended by [N. Title][ADR-N]`    | This ADR corrects or invalidates part of the linked ADR without replacing it; both remain `Accepted` |
+| `- References [N. Title][ADR-N]` | `- Referenced by [N. Title][ADR-N]` | This ADR explicitly cites the linked ADR in its prose for context only; no status change             |
+
+Use these rules when deciding between the two non-supersession link styles:
+
+- Use `- Amended by ...` only when the new ADR corrects or invalidates
+  something in the original ADR.
+- Use `- Referenced by ...` only when the new ADR actually references the
+  existing ADR in its content/prose, not merely because they are related.
 
 ## Drafting a New ADR
 
