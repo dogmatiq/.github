@@ -249,6 +249,8 @@ a corrected version.
 
 - [ ] No undecided concepts or unfinished implementation details referenced
 - [ ] Consequences are inherent properties, not aspirational claims
+- [ ] Each consequence follows logically from the decision; no consequences that
+      would occur regardless of the decision, or that stem from a different decision
 - [ ] No superseded or deprecated ADR is cited as the basis for a decision
 - [ ] No "future ADRs will..." phrasing (use "we are free to..." instead)
 
