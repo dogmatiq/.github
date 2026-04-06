@@ -113,7 +113,7 @@ drafts are deleted; do not leave placeholder files or gaps.
 ### 2. Set the status
 
 New ADRs start as `Proposed`. Do not change the status during drafting. See
-[ADR Status](#adr-status) for allowed values and relationship annotations.
+[ADR Status] for allowed values and relationship annotations.
 
 ### 3. Write the title
 
@@ -147,8 +147,10 @@ conventions.
 
 **Decision** — explain what we will do and why:
 
-- Use first-person plural throughout: "We will...", "We need...",
-  "We considered..."
+- Prefer first-person plural ("We will...", "We need...", "We considered...")
+  to keep the tone conversational. It is not required in every sentence —
+  readability comes first — but it should set the overall voice and steer away
+  from overly formal, specification-like, or academic language.
 - Include a "Dismissed alternatives" subsection when alternatives were seriously
   considered. Acknowledge genuine advantages before explaining why each was
   rejected. Be specific about the reasons.
@@ -159,8 +161,10 @@ conventions.
 - Describe what is true as a result of the decision, not what we hope will be
   true.
 - Use "we are free to..." for future possibilities, not "future ADRs will..."
-- Note any glossary terms this ADR introduces. Example: "This ADR introduces
-  two terms to the glossary: rendezvous hashing and self-affinity."
+- If (and only if) this ADR introduces new glossary terms, call them out
+  explicitly. Example: "This ADR introduces two terms to the glossary:
+  rendezvous hashing and self-affinity." If no new terms are introduced, omit
+  any mention of the glossary.
 - Do not cite rejected or superseded ADRs as the basis for a decision.
 
 ### 5. Add references
@@ -188,9 +192,9 @@ Work through every item in the [Style Checklist].
 
 ## Reviewing an Existing ADR
 
-Read the ADR, work through the [Style Checklist](#style-checklist), and report
-all issues found. For each issue: quote the offending text, name the rule it
-breaks, and suggest a corrected version.
+Read the ADR, work through the [Style Checklist], and report all issues found.
+For each issue: quote the offending text, name the rule it breaks, and suggest
+a corrected version.
 
 ## Style Checklist
 
@@ -215,8 +219,9 @@ breaks, and suggest a corrected version.
 ### Voice and characters
 
 - [ ] Follows the [style guide] (line wrapping, characters, reference links)
-- [ ] First-person plural throughout ("We will...", "We considered...")
-- [ ] Conversational tone, not academic
+- [ ] First-person plural preferred ("We will...", "We considered..."); not
+      required in every sentence, but sets the overall conversational tone
+- [ ] Conversational tone, not academic or specification-like
 
 ### Terminology
 
@@ -261,7 +266,8 @@ breaks, and suggest a corrected version.
 
 ### Glossary
 
-- [ ] Any new terms introduced by this ADR are called out in Consequences
+- [ ] If new glossary terms are introduced, they are called out in Consequences;
+      if none are introduced, the glossary is not mentioned
 
 <!-- references -->
 
@@ -270,6 +276,7 @@ breaks, and suggest a corrected version.
 [0022-remove-crud-application-support.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0022-remove-crud-application-support.md
 [0023-message-order-guarantees.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0023-message-order-guarantees.md
 [0026-event-stream-based-projection-occ.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0026-event-stream-based-projection-occ.md
+[ADR Status]: #adr-status
 [ADR template]: ./assets/adr-template.md
 [Style Checklist]: #style-checklist
 [style guide]: ../prose/SKILL.md

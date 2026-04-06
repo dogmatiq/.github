@@ -105,7 +105,7 @@ Use the form:
 - If a term has been superseded or renamed, add a `See [replacement].` line
   and leave the original heading so existing links do not break.
 - If the term was introduced by an ADR that has since been superseded,
-  update the `See also [ADR-NNNN].` reference and the link in the
+  update the `See [ADR-N].` reference and the link in the
   `<!-- ADRs -->` block.
 
 ## Style Checklist
