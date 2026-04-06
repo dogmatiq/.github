@@ -68,7 +68,7 @@ Follow these rules:
   when genuinely necessary.
 - **Define the term itself, not how it is used.** The first sentence should
   complete "X is ..." or "An X is ...".
-- **Follow `docs/style.md`** for line wrapping, character, and reference link
+- **Follow the [style guide]** for line wrapping, character, and reference link
   conventions.
 - **Cross-reference related terms** inline in the definition prose where it
   reads naturally. If a related term is not mentioned in the prose, add a
@@ -123,7 +123,7 @@ any additional conventions specific to this project.
 
 ### Entries
 
-- [ ] Follows `docs/style.md` (line wrapping, characters, reference links)
+- [ ] Follows the [style guide] (line wrapping, characters, reference links)
 - [ ] Term heading uses the canonical capitalisation for the term (not all-caps
       or all-lowercase unless that is the proper form)
 - [ ] Definition is prose, no bullet lists
@@ -144,3 +144,4 @@ any additional conventions specific to this project.
 <!-- references -->
 
 [Dogma glossary]: https://github.com/dogmatiq/dogma/blob/main/docs/glossary.md
+[style guide]: ../prose/SKILL.md

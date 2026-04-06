@@ -134,7 +134,7 @@ going forward. Do not use a special status for this — it is a first-class
 
 Copy [ADR template] and fill it in.
 
-Follow `docs/style.md` for line wrapping, character, and reference link
+Follow the [style guide] for line wrapping, character, and reference link
 conventions.
 
 **Context** — one to three paragraphs:
@@ -214,7 +214,7 @@ breaks, and suggest a corrected version.
 
 ### Voice and characters
 
-- [ ] Follows `docs/style.md` (line wrapping, characters, reference links)
+- [ ] Follows the [style guide] (line wrapping, characters, reference links)
 - [ ] First-person plural throughout ("We will...", "We considered...")
 - [ ] Conversational tone, not academic
 
@@ -272,3 +272,4 @@ breaks, and suggest a corrected version.
 [0026-event-stream-based-projection-occ.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0026-event-stream-based-projection-occ.md
 [ADR template]: ./assets/adr-template.md
 [Style Checklist]: #style-checklist
+[style guide]: ../prose/SKILL.md
