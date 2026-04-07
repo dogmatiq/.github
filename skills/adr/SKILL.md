@@ -94,12 +94,19 @@ ADR. Multiple annotations of the same kind are allowed.
 
 Use these rules when deciding between the two non-supersession link styles:
 
-- Use `- Amended by ...` only when the new ADR corrects or invalidates
-  something in the original ADR.
-- Use `- Referenced by ...` only when the new ADR actually references the
-  existing ADR in its content/prose, not merely because they are related.
+- Use `- Amends ...` / `- Amended by ...` only when the new ADR corrects or
+  invalidates something in the original ADR.
+- Use `- References ...` / `- Referenced by ...` only when the prose of this
+  ADR actually cites the linked ADR — not merely because two ADRs are
+  thematically connected.
 
 ## Drafting a New ADR
+
+Before starting, settle the scope: if two decisions are direct consequences of
+each other, record them together in one ADR. Splitting forces cross-references
+to reconstruct what is really one choice. Conversely, if a concern is genuinely
+separable — it sits independently of the other decisions — record it in its own
+ADR and call out the boundary explicitly in each.
 
 ### 1. Determine the file number
 
@@ -151,6 +158,10 @@ conventions.
   to keep the tone conversational. It is not required in every sentence —
   readability comes first — but it should set the overall voice and steer away
   from overly formal, specification-like, or academic language.
+- Ordinary English words used in their ordinary sense — "acceptance",
+  "submission", "commitment" — are not terms of art. Express the concept
+  directly ("the engine writes the command envelope") rather than naming the
+  act ("the acceptance step").
 - Include a "Dismissed alternatives" subsection when alternatives were seriously
   considered. Acknowledge genuine advantages before explaining why each was
   rejected. Be specific about the reasons.
@@ -196,6 +207,20 @@ Read the ADR, work through the [Style Checklist], and report all issues found.
 For each issue: quote the offending text, name the rule it breaks, and suggest
 a corrected version.
 
+## Accepting an ADR
+
+Before changing an ADR's status from `Proposed` to `Accepted`, scan the
+glossary for any definitions the decision affects:
+
+- **Stale definitions** — entries that described the old design and no longer
+  accurately reflect what the ADR has established.
+- **Missing entries** — terms introduced by the ADR that do not yet have
+  glossary entries. These should already be called out in the Consequences
+  section.
+
+Update the glossary in the same commit that changes the status. Use the
+[glossary skill] to make any changes.
+
 ## Style Checklist
 
 ### Structure
@@ -231,6 +256,8 @@ a corrected version.
 - [ ] No terms that collide with established meanings in other domains
 - [ ] Dogma ecosystem terms (command, aggregate, process, etc.) used without
       redefinition
+- [ ] Ordinary English words used in their ordinary sense ("acceptance",
+      "submission", etc.) are not treated as defined terms of art
 
 ### Claims and evidence
 
@@ -244,6 +271,8 @@ a corrected version.
       (Wikipedia, RFC, spec, or official docs)
 - [ ] Code identifiers from other repositories linked to pkg.go.dev
 - [ ] RFCs linked to rfc-editor.org
+- [ ] `References`/`Referenced by` annotations added only when this ADR's
+      prose actually cites the linked ADR
 
 ### Scope boundaries
 
@@ -270,6 +299,8 @@ a corrected version.
 
 - [ ] If new glossary terms are introduced, they are called out in Consequences;
       if none are introduced, the glossary is not mentioned
+- [ ] On acceptance: glossary reviewed for stale definitions and missing
+      entries (see [Accepting an ADR])
 
 <!-- references -->
 
@@ -278,7 +309,9 @@ a corrected version.
 [0022-remove-crud-application-support.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0022-remove-crud-application-support.md
 [0023-message-order-guarantees.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0023-message-order-guarantees.md
 [0026-event-stream-based-projection-occ.md]: https://github.com/dogmatiq/dogma/blob/main/docs/adr/0026-event-stream-based-projection-occ.md
+[Accepting an ADR]: #accepting-an-adr
 [ADR Status]: #adr-status
 [ADR template]: ./assets/adr-template.md
+[glossary skill]: ../glossary/SKILL.md
 [Style Checklist]: #style-checklist
 [style guide]: ../prose/SKILL.md

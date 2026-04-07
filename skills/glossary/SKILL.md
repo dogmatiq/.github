@@ -18,6 +18,7 @@ they are cross-referenced only.
 - A term appears in project prose but has no glossary entry yet
 - An existing definition needs correction or clarification
 - Reviewing a glossary for completeness, style, or stale links
+- An ADR has been accepted and existing definitions may be stale or incorrect
 
 ## File Structure
 
@@ -107,6 +108,19 @@ Use the form:
 - If the term was introduced by an ADR that has since been superseded,
   update the `See [ADR-N].` reference and the link in the
   `<!-- ADRs -->` block.
+
+## Reviewing After ADR Acceptance
+
+When an ADR is accepted, scan the glossary for two categories of definition
+that may need updating:
+
+- **Stale definitions** — entries that described the old design and no longer
+  accurately reflect what the ADR has established.
+- **Missing entries** — terms introduced by the ADR that do not yet have
+  glossary entries. These should already be called out in the ADR's
+  Consequences section.
+
+Update any affected entries as part of the same change that accepts the ADR.
 
 ## Style Checklist
 
