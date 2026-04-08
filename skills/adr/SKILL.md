@@ -124,10 +124,12 @@ New ADRs start as `Proposed`. Do not change the status during drafting. See
 
 ### 3. Write the title
 
-The title states the decision, not the problem. It is a noun phrase, not a
-question.
+The title is a short noun phrase that identifies the decision. It does not need
+to fully articulate the decision as a statement — naming the thing being adopted
+or implemented is enough. It is not a question or a problem statement.
 
-- Good: "Rendezvous hashing for workload assignment"
+- Good: "Rendezvous hashing" (names the thing adopted)
+- Good: "Rendezvous hashing for workload assignment" (also fine when extra context helps)
 - Bad: "How should we assign workloads?"
 
 **Negative decisions:** If the team explicitly decides _not_ to do something,
