@@ -180,7 +180,24 @@ conventions.
   any mention of the glossary.
 - Do not cite rejected or superseded ADRs as the basis for a decision.
 
-### 5. Add references
+### 5. Add diagrams (if needed)
+
+Include a [Mermaid] diagram — especially a sequence diagram — when a
+procedure, protocol, or multi-party interaction described in the prose would
+be clearer with a visual representation. A diagram should reinforce existing
+prose, not replace it: if the prose could be removed without loss after adding
+the diagram, the prose was not doing its job.
+
+When adding a diagram:
+
+- Place it immediately after the prose it illustrates, not at the end of a
+  section.
+- Keep every actor, message, state, and step in the diagram consistent with
+  the surrounding prose. Mismatches are silent contradictions.
+- Do not add diagrams speculatively. Add one only when the prose is already
+  written and the diagram genuinely reduces cognitive load.
+
+### 6. Add references
 
 - Link external concepts to a well-regarded source on first use. Prefer
   Wikipedia for general concepts; use a more authoritative source (RFC, spec,
@@ -195,11 +212,11 @@ conventions.
   form when the display text should be the full title, as in relationship
   annotations.
 
-### 6. Update the index
+### 7. Update the index
 
 Run `make docs/adr/README.md` to regenerate the ADR index.
 
-### 7. Run the pre-flight checklist
+### 8. Run the pre-flight checklist
 
 Work through every item in the [Style Checklist].
 
@@ -292,6 +309,15 @@ Update the glossary in the same commit that changes the status. Use the
 - [ ] Reasons are specific, not vague ("adds complexity without benefit here
       because...")
 
+### Diagrams (if present)
+
+- [ ] Each diagram immediately follows the prose it illustrates
+- [ ] Every actor, message, state, and step in the diagram matches the
+      surrounding prose exactly — no silent contradictions
+- [ ] The prose remains meaningful if the diagram is removed; the diagram
+      supplements, not replaces
+- [ ] Rendered as a fenced code block with the `mermaid` language tag
+
 ### Pseudocode (if present)
 
 - [ ] Uses the same terms as surrounding prose (not synonyms or abbreviations)
@@ -315,5 +341,6 @@ Update the glossary in the same commit that changes the status. Use the
 [ADR Status]: #adr-status
 [ADR template]: ./assets/adr-template.md
 [glossary skill]: ../glossary/SKILL.md
+[Mermaid]: https://mermaid.js.org
 [Style Checklist]: #style-checklist
 [style guide]: ../prose/SKILL.md
