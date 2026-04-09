@@ -100,6 +100,27 @@ Use these rules when deciding between the two non-supersession link styles:
   ADR actually cites the linked ADR — not merely because two ADRs are
   thematically connected.
 
+## Amending an Existing ADR
+
+When an amendment ADR is written:
+
+- Do not include a "Dismissed alternatives" subsection. The original design is
+  what is being revised — it is not an alternative. Any acknowledgment of its
+  properties, including things it did well, belongs in Context.
+
+When updating the original ADR to reflect the amendment:
+
+- Add the `- Amended by [N. Title][ADR-N]` annotation to its Status section as
+  normal.
+- In the body of the original ADR, add a GitHub admonition at each location the
+  amendment touches — not only in the Status section. Link the admonition to
+  the amending ADR. Choose the admonition level based on the magnitude of the
+  change at that site:
+  - `[!NOTE]` — minor correction or clarification
+  - `[!IMPORTANT]` — a substantive part of the design has changed
+  - `[!WARNING]` — the original content should not be relied upon without
+    reading the amendment
+
 ## Drafting a New ADR
 
 Before starting, settle the scope: if two decisions are direct consequences of
@@ -152,7 +173,12 @@ conventions.
 - Introduce every term that will appear in the Decision section as prose, woven
   into the narrative. If "candidate" appears in Decision, it must be defined
   here first. Do not introduce terms as a glossary list or bullet definitions.
-- Do not propose or evaluate solutions in this section.
+- Do not propose or evaluate solutions in this section. This includes verdict
+  or evaluative phrases such as "does not justify the costs" — those belong in
+  Decision.
+- Any project-specific terms used as though they are settled vocabulary must be
+  either explained in place, traced to an existing ADR with a citation link, or
+  replaced with plain language.
 
 **Decision** — explain what we will do and why:
 
@@ -169,11 +195,19 @@ conventions.
   rejected. Be specific about the reasons.
 - Any pseudocode must use the exact terms from the prose.
 
-**Consequences** — inherent properties only:
+**Consequences**:
 
-- Describe what is true as a result of the decision, not what we hope will be
-  true.
-- Use "we are free to..." for future possibilities, not "future ADRs will..."
+- Describe the results of the decision. These should be grounded in what was
+  actually decided, but need not read like a specification — informal
+  observations about what might be beneficial, or suggestions worth carrying
+  forward, are welcome. Write conversationally.
+- Scope each consequence to what this ADR specifically changed. Avoid claiming
+  effects across the broader system when only a narrow part was touched.
+- When a consequence is that something is unconstrained, or that a constraint
+  is lifted, name that absence of constraint directly. "We are free to..." is
+  one natural form of this. Do not use it to express a design preference or
+  intent — state those directly.
+- Do not use "future ADRs will..." phrasing.
 - If (and only if) this ADR introduces new glossary terms, call them out
   explicitly. Example: "This ADR introduces two terms to the glossary:
   rendezvous hashing and self-affinity." If no new terms are introduced, omit
@@ -249,6 +283,9 @@ Update the glossary in the same commit that changes the status. Use the
 - [ ] Relationship annotations are bullets below the status value,
       using only the six allowed verbs
 - [ ] Every relationship annotation has its counterpart added to the linked ADR
+- [ ] For amendment ADRs: body of the original ADR has admonitions at each
+      amended location, with the level reflecting the magnitude of the change
+      (see [Amending an Existing ADR])
 - [ ] `Proposed`, `Superseded`, and `Deprecated` ADRs include the
       exact required admonition after `## Status`, including whitespace
       and line breaks
@@ -263,20 +300,22 @@ Update the glossary in the same commit that changes the status. Use the
 ### Voice and characters
 
 - [ ] Follows the [style guide] (line wrapping, characters, reference links)
-- [ ] First-person plural preferred ("We will...", "We considered..."); not
-      required in every sentence, but sets the overall conversational tone
+- [ ] First-person plural preferred throughout; not mandatory in every sentence
 - [ ] Conversational tone, not academic or specification-like
+- [ ] Context contains no evaluative or verdict language
 
 ### Terminology
 
 - [ ] Every term introduced before first use
 - [ ] Consistent terminology throughout; no synonym alternation
 - [ ] No unexplained jargon; written for average programmers
-- [ ] No terms that collide with established meanings in other domains
+- [ ] Project-specific terms used as settled vocabulary are explained in place,
+      cited to an ADR, or replaced with plain language
+- [ ] Terms from established disciplines (DDD especially) used with their
+      proper meanings, not casually
 - [ ] Dogma ecosystem terms (command, aggregate, process, etc.) used without
       redefinition
-- [ ] Ordinary English words used in their ordinary sense ("acceptance",
-      "submission", etc.) are not treated as defined terms of art
+- [ ] Ordinary English words not treated as defined terms of art
 
 ### Claims and evidence
 
@@ -290,21 +329,24 @@ Update the glossary in the same commit that changes the status. Use the
       (Wikipedia, RFC, spec, or official docs)
 - [ ] Code identifiers from other repositories linked to pkg.go.dev
 - [ ] RFCs linked to rfc-editor.org
-- [ ] `References`/`Referenced by` annotations added only when this ADR's
-      prose actually cites the linked ADR
+- [ ] `References`/`Referenced by` only when the prose actually cites the
+      linked ADR
 
 ### Scope boundaries
 
 - [ ] No undecided concepts or unfinished implementation details referenced
-- [ ] Consequences are inherent properties, not aspirational claims
-- [ ] Each consequence follows logically from the decision; no consequences that
-      would occur regardless of the decision, or that stem from a different decision
+- [ ] Consequences grounded in the decision; informal observations welcome,
+      not aspirational claims
+- [ ] Each consequence scoped to what this ADR specifically changed
+- [ ] No-constraint signals (e.g. "we are free to...") only where a constraint
+      is genuinely absent or lifted, not to express design intent
 - [ ] No superseded or deprecated ADR is cited as the basis for a decision
-- [ ] No "future ADRs will..." phrasing (use "we are free to..." instead)
+- [ ] No "future ADRs will..." phrasing
 
 ### Dismissed alternatives (if present)
 
 - [ ] Subsection appears under Decision, not as a top-level section
+- [ ] Amendment ADRs do not include this subsection
 - [ ] Genuine advantages acknowledged before reasons for rejection
 - [ ] Reasons are specific, not vague ("adds complexity without benefit here
       because...")
@@ -312,10 +354,8 @@ Update the glossary in the same commit that changes the status. Use the
 ### Diagrams (if present)
 
 - [ ] Each diagram immediately follows the prose it illustrates
-- [ ] Every actor, message, state, and step in the diagram matches the
-      surrounding prose exactly — no silent contradictions
-- [ ] The prose remains meaningful if the diagram is removed; the diagram
-      supplements, not replaces
+- [ ] Every actor, message, and step matches the surrounding prose exactly
+- [ ] Prose remains meaningful without the diagram
 - [ ] Rendered as a fenced code block with the `mermaid` language tag
 
 ### Pseudocode (if present)
@@ -325,8 +365,8 @@ Update the glossary in the same commit that changes the status. Use the
 
 ### Glossary
 
-- [ ] If new glossary terms are introduced, they are called out in Consequences;
-      if none are introduced, the glossary is not mentioned
+- [ ] New glossary terms called out in Consequences; if none, glossary not
+      mentioned
 - [ ] On acceptance: glossary reviewed for stale definitions and missing
       entries (see [Accepting an ADR])
 
