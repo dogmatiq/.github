@@ -29,15 +29,23 @@ requires it (e.g. `LICENSE`, `Makefile`).
 Reflow paragraph text so that each line fits as many words as possible
 within 80 characters.
 
-### Characters
+### Punctuation
 
-- No curly quotes or curly apostrophes in prose. Use straight ASCII quotes
-  and apostrophes.
-- Use a proper em dash character — not hyphen(s) — as a parenthetical
-  separator. However, do not overuse em dashes. If a sentence or paragraph
-  is heavy with them, consider restructuring with commas, colons, or
-  separate sentences instead.
 - Non-ASCII characters in code blocks and formulas are acceptable.
+- Do not use curly quotes or curly apostrophes in prose. Use straight ASCII
+  quotes and apostrophes.
+- Use em dash — not hyphen(s) — as a parenthetical separator.
+- Use an em dash for definitional appositions in both lists and paragraphs.
+  Do not use colons, semicolons, or parentheses for this purpose.
+- Consider restructuring sentences or paragraphs that contain many em dashes.
+- Use semicolons sparingly:
+  - for contrast (A; B does not).
+  - for qualification (A; however B).
+  - for logical consequence (A; therefore B).
+- Prefer a period to a semicolon if the clauses read naturally as two separate
+  sentences.
+- If you see double hyphens in prose, replace them with an em dash when
+  appropriate. Otherwise, suggest the correct punctuation.
 
 ### Spelling
 
