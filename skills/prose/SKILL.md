@@ -18,6 +18,21 @@ covers the shared baseline.
 
 ## Rules
 
+Tone: relaxed but precise.
+
+Write as an experienced engineer explaining the topic to another engineer.
+Avoid overly formal specification language. Prefer clear, natural explanations
+while remaining technically accurate. The tone should be approachable and
+conversational, but not casual.
+
+Assume readers have an intermediate understanding of software development but
+may not be familiar with Dogmatiq projects or the specific domain of the
+document. Avoid jargon and explain any necessary technical terms.
+
+Avatar: an application developer with approximately five years of professional
+experience, familiar with Go, and with minimal background in algorithms or
+mathematics.
+
 ### File naming
 
 Use lowercase names for all documentation files (e.g. `glossary.md`,
